@@ -1,0 +1,794 @@
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  :root {
+    --shadow: none;
+  }
+
+  html,
+  body {
+    width: 210mm;
+    margin: 0;
+    padding: 0;
+    background: #fff !important;
+    color: #172033;
+    font-size: 9.2pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .document-actions {
+    display: none !important;
+  }
+
+  .document-shell {
+    width: 210mm;
+    margin: 0;
+  }
+
+  .print-page {
+    width: 210mm;
+    height: 297mm;
+    min-height: 297mm;
+    margin: 0;
+    padding: 13mm 15mm 12mm;
+    overflow: hidden;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    break-after: page;
+    page-break-after: always;
+  }
+
+  .print-page:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  .print-page::before {
+    height: 2mm;
+  }
+
+  .resume-hero {
+    grid-template-columns: minmax(0, 1fr) 25mm;
+    gap: 7mm;
+    padding-bottom: 5mm;
+  }
+
+  .resume-hero h1 {
+    font-size: 26pt;
+  }
+
+  .resume-hero h1 small {
+    margin-top: 1.5mm;
+    font-size: 12.5pt;
+  }
+
+  .eyebrow {
+    margin-bottom: 2mm;
+    font-size: 7.2pt;
+  }
+
+  .contact-line {
+    margin-top: 3mm;
+    font-size: 7.7pt;
+  }
+
+  .profile-copy {
+    margin-top: 3mm;
+    font-size: 8.5pt;
+    line-height: 1.55;
+  }
+
+  .profile-photo {
+    width: 25mm;
+    border-radius: 3mm;
+  }
+
+  .resume-section + .resume-section {
+    margin-top: 5mm;
+  }
+
+  .resume-hero + .resume-section {
+    margin-top: 5mm;
+  }
+
+  .section-heading {
+    margin-bottom: 2.5mm;
+  }
+
+  .section-heading h2 {
+    font-size: 8.2pt;
+  }
+
+  .skill-list {
+    gap: 0 6mm;
+  }
+
+  .skill-list > div {
+    grid-template-columns: 29mm minmax(0, 1fr);
+    gap: 2mm;
+    padding: 1.6mm 0;
+  }
+
+  .skill-list dt,
+  .skill-list dd {
+    font-size: 8.2pt;
+    color: #334155;
+  }
+
+  .timeline-item {
+    padding-left: 4mm;
+  }
+
+  .timeline-item + .timeline-item {
+    margin-top: 4.5mm;
+  }
+
+  .item-heading h3 {
+    font-size: 10.5pt;
+  }
+
+  .item-meta,
+  .item-title-line time {
+    font-size: 8.0pt;
+    color: #475569;
+  }
+
+  .timeline-item ul,
+  .project-card ul,
+  .case-block ul {
+    margin-top: 2mm;
+    font-size: 8.6pt;
+    line-height: 1.48;
+  }
+
+  .timeline-item li + li,
+  .project-card li + li,
+  .case-block li + li {
+    margin-top: 1.0mm;
+  }
+
+  .project-list {
+    gap: 3.5mm;
+  }
+
+  .project-card {
+    padding: 3.8mm 4.0mm;
+    border-radius: 2.5mm;
+    break-inside: avoid;
+    border: 1px solid #b8c8dc;
+  }
+
+  .project-summary {
+    margin-top: 2mm;
+    font-size: 8.8pt;
+    line-height: 1.48;
+  }
+
+  .project-body {
+    grid-template-columns: minmax(0, 1fr) 37mm;
+    gap: 4mm;
+  }
+
+  .screen-motion {
+    display: none !important;
+  }
+
+  .print-poster {
+    display: block !important;
+  }
+
+  .fact-list {
+    gap: 1.5mm;
+  }
+
+  .fact-list > div {
+    grid-template-columns: minmax(0, 1fr) 42mm 28mm;
+    gap: 2mm;
+    padding-bottom: 1.5mm;
+  }
+
+  .fact-list strong,
+  .fact-list span,
+  .fact-list time,
+  .inline-facts li,
+  .single-fact {
+    font-size: 8.0pt;
+    color: #334155;
+  }
+
+  .education-details {
+    margin-top: 1.0mm;
+    font-size: 8.0pt;
+    color: #475569;
+  }
+
+  .education-details li + li {
+    margin-top: 0.8mm;
+  }
+
+  .continuation-header {
+    margin-bottom: 5mm;
+    padding-bottom: 2.5mm;
+    font-size: 8.0pt;
+  }
+
+  .continuation-header strong {
+    font-size: 11pt;
+  }
+
+  body[data-document="master"] .resume-page[data-page-number="3"] .continuation-header {
+    margin-bottom: 10mm;
+  }
+
+  body[data-document="master"] .resume-page[data-page-number="3"] .resume-section + .resume-section {
+    margin-top: 11mm;
+  }
+
+  body[data-document="master"] .resume-page[data-page-number="3"] .fact-list {
+    gap: 3mm;
+  }
+
+  body[data-document="master"] .resume-page[data-page-number="3"] .fact-list > div {
+    padding-bottom: 3mm;
+  }
+
+  .page-marker {
+    right: 15mm;
+    bottom: 5mm;
+    left: 15mm;
+    font-size: 7.2pt;
+    color: #475569;
+  }
+
+  .case-page {
+    padding-top: 14mm;
+  }
+
+  .case-hero {
+    padding: 6mm 0 5mm;
+  }
+
+  .case-hero h1 {
+    font-size: 25pt;
+  }
+
+  .case-subtitle {
+    margin-top: 3mm;
+    font-size: 10.5pt;
+  }
+
+  .case-lead {
+    margin: 5mm 0;
+    font-size: 9pt;
+  }
+
+  .case-overview-row {
+    grid-template-columns: 58mm minmax(0, 1fr);
+    gap: 3mm 5mm;
+    padding: 8.5mm 0;
+    border-bottom: 1px solid #b8c8dc;
+  }
+
+  .case-overview-title {
+    gap: 2.5mm;
+  }
+
+  .case-overview-title h2 {
+    margin-bottom: 1.2mm;
+    font-size: 12pt;
+    color: #172033;
+  }
+
+  .case-overview-title time,
+  .case-title-line time {
+    font-size: 8.0pt !important;
+    color: #475569;
+    white-space: nowrap !important;
+    flex-shrink: 0;
+  }
+
+  .overview-intro-text {
+    font-size: 9.3pt !important;
+    line-height: 1.55 !important;
+    color: #172033 !important;
+    margin-bottom: 2.5mm !important;
+  }
+
+  .case-stack {
+    gap: 2mm;
+    margin-top: 2.5mm;
+    font-size: 8.2pt;
+  }
+
+  .case-overview-copy .case-stack {
+    margin-top: 2.5mm !important;
+    font-size: 8.8pt !important;
+  }
+
+  .case-overview-copy .case-stack strong {
+    font-size: 8.8pt !important;
+    color: var(--accent-dark) !important;
+  }
+
+  .title-nowrap {
+    white-space: nowrap !important;
+  }
+
+  figcaption {
+    padding: 1.8mm 2.2mm;
+    font-size: 8.0pt !important;
+    color: #334155 !important;
+  }
+
+  .case-section-header {
+    gap: 4mm;
+    margin-bottom: 2.5mm;
+    padding-bottom: 2.5mm;
+  }
+
+  .case-section-header > div {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .case-section-header > span {
+    font-size: 22pt;
+  }
+
+  .case-section-header p {
+    font-size: 7.8pt !important;
+    color: #475569 !important;
+    font-weight: 700 !important;
+  }
+
+  .case-section-header h2 {
+    font-size: 14.5pt !important;
+  }
+
+  .case-title-line {
+    display: flex;
+    align-items: baseline;
+    gap: 3.2mm;
+    width: 100%;
+  }
+
+  .case-repo-link {
+    margin-left: auto;
+    font-size: 7.8pt !important;
+    font-weight: 700 !important;
+    color: #174ca8 !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid #174ca8;
+    padding-bottom: 0.2mm;
+    white-space: nowrap !important;
+    flex-shrink: 0;
+  }
+
+  .case-intro {
+    margin: 2mm 0 3mm;
+    font-size: 8.8pt !important;
+    line-height: 1.48 !important;
+    color: #172033 !important;
+  }
+
+  .case-responsibility {
+    margin-top: 2mm;
+    font-size: 8.0pt !important;
+    color: #475569 !important;
+  }
+
+  .case-responsibility + .case-intro {
+    margin-top: 1.0mm;
+  }
+
+  .io-grid {
+    display: none !important;
+  }
+
+  .case-lead-grid {
+    grid-template-columns: minmax(0, 1.8fr) minmax(38mm, 0.8fr);
+    gap: 4mm;
+    margin: 3mm 0;
+    align-items: stretch !important;
+  }
+
+  .case-primary-figure {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    justify-content: space-between !important;
+    overflow: hidden !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 3px !important;
+    background: #fafbfd !important;
+    box-sizing: border-box !important;
+  }
+
+  .case-primary-figure figcaption {
+    margin-top: auto !important;
+    padding: 1.8mm 2.2mm !important;
+    border-top: 1px solid var(--line) !important;
+    background: #fff !important;
+    font-size: 8.0pt !important;
+    color: #334155 !important;
+    box-sizing: border-box !important;
+  }
+
+  .case-primary-figure img,
+  .evidence-grid img {
+    width: 100%;
+    height: auto;
+  }
+
+  .case-facts {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    justify-content: flex-start !important;
+    overflow: hidden !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 3px !important;
+    background: #fafbfd !important;
+    padding: 2.8mm 3.2mm !important;
+    box-sizing: border-box !important;
+  }
+
+  .case-facts .case-stack {
+    margin: 0 0 2mm 0 !important;
+    padding-bottom: 2mm !important;
+    border-bottom: 1px solid var(--line) !important;
+  }
+
+  .case-facts .case-stack strong {
+    display: block !important;
+    margin-bottom: 1mm !important;
+    color: var(--accent-dark) !important;
+    font-size: 9.0pt !important;
+    font-weight: 800 !important;
+  }
+
+  .case-facts .stack-lines {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.8mm !important;
+  }
+
+  .case-facts .stack-line {
+    display: block !important;
+    font-size: 8.2pt !important;
+    line-height: 1.4 !important;
+    color: #334155 !important;
+  }
+
+  .case-facts .case-stack span {
+    font-size: 8.2pt !important;
+    line-height: 1.4 !important;
+    color: #334155 !important;
+  }
+
+  .case-results {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    border-top: none !important;
+  }
+
+  .case-results h3 {
+    font-size: 9.0pt !important;
+    margin-bottom: 1.5mm !important;
+  }
+
+  .case-results ul {
+    font-size: 8.6pt !important;
+    line-height: 1.48 !important;
+    color: #172033 !important;
+    margin: 0 0 0 3.2mm !important;
+    padding: 0 !important;
+  }
+
+  .case-results li + li {
+    margin-top: 1mm !important;
+  }
+
+  .diagram-figure {
+    margin: 3mm 0;
+    padding: 2.5mm;
+  }
+
+  .diagram-figure img {
+    max-height: 55mm;
+  }
+
+  .split-diagrams {
+    display: grid !important;
+    grid-template-columns: 1.15fr 0.85fr !important;
+    gap: 3.5mm !important;
+  }
+
+  .split-diagrams img {
+    width: 100% !important;
+    max-height: 50mm !important;
+    object-fit: contain !important;
+  }
+
+  .two-column-cases {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 5mm !important;
+    margin-top: 3mm !important;
+    padding-top: 3mm !important;
+  }
+
+  .case-block h3 {
+    font-size: 9.0pt !important;
+  }
+
+  .case-block ul {
+    font-size: 8.6pt !important;
+    line-height: 1.48 !important;
+    color: #172033 !important;
+  }
+
+  .evidence-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 3mm !important;
+    margin-top: 3mm !important;
+    align-items: stretch !important;
+  }
+
+  .evidence-grid figure {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    justify-content: space-between !important;
+    overflow: hidden !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 3px !important;
+    background: #fafbfd !important;
+  }
+
+  .evidence-grid img {
+    display: block !important;
+    margin: auto !important;
+    max-width: 100% !important;
+    max-height: 28mm !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .evidence-grid figcaption {
+    margin-top: auto !important;
+    padding: 1.8mm 2.2mm !important;
+    border-top: 1px solid var(--line) !important;
+    background: #fff !important;
+    font-size: 8.0pt !important;
+    color: #334155 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 4페이지 VP Case 인쇄 */
+  .vp-dual-figures {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2.5mm !important;
+    align-items: stretch !important;
+    height: 100% !important;
+  }
+
+  .vp-dual-figures figure {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    justify-content: space-between !important;
+    overflow: hidden !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 3px !important;
+    background: #fafbfd !important;
+  }
+
+  .vp-dual-figures img {
+    display: block !important;
+    margin: auto !important;
+    max-width: 100% !important;
+    max-height: 34mm !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .vp-dual-figures figcaption {
+    margin-top: auto !important;
+    padding: 1.8mm 2.2mm !important;
+    border-top: 1px solid var(--line) !important;
+    background: #fff !important;
+    font-size: 8.0pt !important;
+    color: #334155 !important;
+    box-sizing: border-box !important;
+  }
+
+  .vp-diagram-figure {
+    margin: 3mm 0 !important;
+    padding: 2mm !important;
+  }
+
+  .vp-diagram-figure img {
+    max-height: 58mm !important;
+    width: 100% !important;
+    object-fit: contain !important;
+  }
+
+  /* 5페이지 VP Optimization 인쇄 */
+  .vp-opt-page {
+    padding-top: 8mm;
+  }
+
+  .vp-opt-page .case-section-header {
+    margin-bottom: 2mm;
+    padding-bottom: 2mm;
+  }
+
+  .vp-opt-page .case-intro {
+    margin: 1.2mm 0 2.5mm;
+    font-size: 8.8pt !important;
+    line-height: 1.45;
+    color: #172033 !important;
+  }
+
+  .opt-card-block {
+    padding: 2.8mm 3.5mm !important;
+    margin-bottom: 2.8mm !important;
+    border-radius: 2.5mm;
+    border: 1px solid #b8c8dc;
+    background: #fafbfd;
+    box-sizing: border-box;
+  }
+
+  .opt-header-line {
+    display: flex;
+    align-items: center;
+    gap: 2.2mm;
+    margin-bottom: 1.5mm !important;
+  }
+
+  .opt-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.8mm;
+    height: 4.8mm;
+    font-size: 7.5pt;
+    font-weight: 800;
+    border-radius: 1.2mm;
+    background: #174ca8;
+    color: #fff;
+  }
+
+  .opt-header-line h3 {
+    margin: 0;
+    font-size: 9.2pt !important;
+    font-weight: 800;
+    color: #172033;
+  }
+
+  .opt-sub {
+    margin: 0;
+    font-size: 8.0pt !important;
+    color: #475569;
+    font-weight: 600;
+  }
+
+  .opt-text-flow {
+    font-size: 8.6pt !important;
+    line-height: 1.45 !important;
+    color: #172033 !important;
+  }
+
+  .opt-text-flow p {
+    margin: 0.8mm 0 !important;
+  }
+
+  .opt-res {
+    color: #174ca8 !important;
+    font-weight: 800 !important;
+  }
+
+  .opt-full-diagram {
+    margin: 2.2mm 0 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    background: transparent !important;
+    border: none !important;
+  }
+
+  .opt-full-diagram img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 36mm !important;
+    object-fit: contain !important;
+  }
+
+  .metrics-full-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 2mm !important;
+    margin: 1.6mm 0 !important;
+    padding: 1.8mm 3.0mm !important;
+    background: #fff !important;
+    border: 1px solid #b8c8dc !important;
+    border-radius: 1.5mm !important;
+  }
+
+  .metric-cell {
+    display: flex;
+    flex-direction: column;
+    font-size: 8.0pt;
+    line-height: 1.35;
+  }
+
+  .metric-cell .m-key {
+    font-size: 8.0pt !important;
+    color: #475569 !important;
+    font-weight: 700;
+  }
+
+  .metric-cell .m-val {
+    font-size: 10.0pt !important;
+    font-weight: 800 !important;
+    color: #174ca8 !important;
+    white-space: nowrap !important;
+    margin-top: 0.3mm;
+  }
+
+  .opt-result-box {
+    margin-top: 1.6mm !important;
+    padding: 1.4mm 2.8mm !important;
+    background: #eff5ff;
+    border: 1px solid #9fbce8;
+    border-radius: 1.5mm;
+  }
+
+  .opt-result-highlight {
+    margin: 0;
+    font-size: 8.6pt !important;
+    font-weight: 800;
+    line-height: 1.36;
+    color: #174ca8;
+  }
+
+  .opt-footnote {
+    font-size: 7.2pt !important;
+    color: #475569;
+    font-weight: normal;
+    margin-left: 1mm;
+  }
+
+  .opt-stability-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 3.2mm !important;
+  }
+
+  .stability-col {
+    margin: 0.8mm 0 0.8mm 2.8mm !important;
+    padding: 0 !important;
+    font-size: 8.5pt !important;
+    line-height: 1.45 !important;
+    color: #172033 !important;
+  }
+
+  .stability-col li + li {
+    margin-top: 0.6mm !important;
+  }
+}

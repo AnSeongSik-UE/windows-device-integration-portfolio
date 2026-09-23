@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="430" viewBox="0 0 760 430" role="img" aria-labelledby="title desc">
+  <title id="title">9채널 RTSP 표시와 녹화 처리 경로</title>
+  <desc id="desc">카메라 RTSP 입력이 수신 스레드와 녹화 스레드로 독립 분기되고 화면과 MP4 파일로 출력된다.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#71849c"/></marker>
+    <style>
+      text { font-family: "Malgun Gothic", "Noto Sans KR", sans-serif; fill: #172033; }
+      .title { font-size: 20px; font-weight: 800; }
+      .sub { font-size: 14px; fill: #607087; }
+      .node { fill: #fff; stroke: #cfd9e6; stroke-width: 2; }
+      .process { fill: #e9f2ff; stroke: #9fbce8; stroke-width: 2; }
+      .output { fill: #174ca8; stroke: #174ca8; stroke-width: 2; }
+      .output-label { fill: #fff; }
+      .line { fill: none; stroke: #71849c; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="760" height="430" rx="22" fill="#f8fafd"/>
+  <g transform="translate(240 28)">
+    <rect class="node" width="280" height="62" rx="13"/>
+    <text class="title" x="140" y="28" text-anchor="middle">측면 8대 · 후방 1대</text>
+    <text class="sub" x="140" y="48" text-anchor="middle">9개 RTSP 스트림</text>
+  </g>
+  <path class="line" d="M380 90V126H195V158"/>
+  <path class="line" d="M380 126H565V158"/>
+  <g transform="translate(62 158)">
+    <rect class="process" width="266" height="72" rx="13"/>
+    <text class="title" x="133" y="29" text-anchor="middle">카메라별 수신 스레드</text>
+    <text class="sub" x="133" y="51" text-anchor="middle">표시 경로</text>
+  </g>
+  <g transform="translate(432 158)">
+    <rect class="process" width="266" height="72" rx="13"/>
+    <text class="title" x="133" y="29" text-anchor="middle">카메라별 녹화 스레드</text>
+    <text class="sub" x="133" y="51" text-anchor="middle">파일 저장 경로</text>
+  </g>
+  <path class="line" d="M195 230V270"/>
+  <path class="line" d="M565 230V270"/>
+  <g transform="translate(62 270)">
+    <rect class="node" width="266" height="62" rx="13"/>
+    <text class="title" x="133" y="27" text-anchor="middle">GPU · CPU 디코딩</text>
+    <text class="sub" x="133" y="47" text-anchor="middle">CUDA 사용 가능 여부에 따라 선택</text>
+  </g>
+  <g transform="translate(432 270)">
+    <rect class="node" width="266" height="62" rx="13"/>
+    <text class="title" x="133" y="27" text-anchor="middle">FFmpeg · NVENC</text>
+    <text class="sub" x="133" y="47" text-anchor="middle">H.264 인코딩</text>
+  </g>
+  <path class="line" d="M195 332V365"/>
+  <path class="line" d="M565 332V365"/>
+  <g transform="translate(62 365)">
+    <rect class="output" width="266" height="44" rx="12"/>
+    <text class="output-label" x="133" y="28" text-anchor="middle" font-size="17" font-weight="800">MFC 9채널 화면</text>
+  </g>
+  <g transform="translate(432 365)">
+    <rect class="output" width="266" height="44" rx="12"/>
+    <text class="output-label" x="133" y="28" text-anchor="middle" font-size="17" font-weight="800">H.264 MP4 파일</text>
+  </g>
+</svg>
