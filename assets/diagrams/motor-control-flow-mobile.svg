@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="330" height="445" viewBox="0 0 330 445" role="img" aria-labelledby="title desc">
+  <title id="title">Motor Control 조이패드 제어 흐름</title>
+  <desc id="desc">Gamepad Input에서 C++/Qt Application으로 입력을 전달하고 Motor Command로 변환해 Motor Controller로 보낸다.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#7890ad"/></marker>
+    <style>
+      text { font-family: "Malgun Gothic", "Noto Sans KR", sans-serif; fill: #172033; }
+      .heading { font-size: 12px; font-weight: 800; letter-spacing: 1.5px; fill: #35516f; }
+      .label { font-size: 18px; font-weight: 800; }
+      .sub { font-size: 13px; fill: #607087; }
+      .node { fill: #fff; stroke: #cfdae8; stroke-width: 2; }
+      .focus { fill: #eff5ff; stroke: #acc4ec; stroke-width: 2; }
+      .line { fill: none; stroke: #7890ad; stroke-width: 2.5; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="330" height="445" rx="18" fill="#f8fafd"/>
+  <text class="heading" x="22" y="32">CONTROL FLOW</text>
+  <g transform="translate(22 55)"><rect class="node" width="286" height="70" rx="10"/><text class="label" x="143" y="29" text-anchor="middle">Gamepad Input</text><text class="sub" x="143" y="51" text-anchor="middle">조이패드 입력</text></g>
+  <path class="line" d="M165 125V147"/>
+  <g transform="translate(22 155)"><rect class="focus" width="286" height="70" rx="10"/><text class="label" x="143" y="29" text-anchor="middle">C++ / Qt Application</text><text class="sub" x="143" y="51" text-anchor="middle">입력 처리 · 명령 변환</text></g>
+  <path class="line" d="M165 225V247"/>
+  <g transform="translate(22 255)"><rect class="node" width="286" height="70" rx="10"/><text class="label" x="143" y="29" text-anchor="middle">Motor Command</text><text class="sub" x="143" y="51" text-anchor="middle">모터 제어 명령</text></g>
+  <path class="line" d="M165 325V347"/>
+  <g transform="translate(22 355)"><rect class="node" width="286" height="70" rx="10"/><text class="label" x="143" y="29" text-anchor="middle">Motor Controller</text><text class="sub" x="143" y="51" text-anchor="middle">모터 제어기</text></g>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="330" viewBox="0 0 480 330" role="img" aria-labelledby="title desc">
+  <title id="title">Motor Control 조이패드 제어 흐름</title>
+  <desc id="desc">Gamepad Input을 C++/Qt Application에서 모터 제어 명령으로 변환해 Motor Controller에 전달한다.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#71849c"/></marker>
+    <style>
+      text { font-family: "Malgun Gothic", "Noto Sans KR", sans-serif; fill: #172033; }
+      .heading { font-size: 14px; font-weight: 800; letter-spacing: 2px; fill: #35516f; }
+      .label { font-size: 17px; font-weight: 800; }
+      .sub { font-size: 12px; fill: #607087; }
+      .node { fill: #fff; stroke: #cfd9e6; stroke-width: 2; }
+      .process { fill: #e9f2ff; stroke: #9fbce8; stroke-width: 2; }
+      .output { fill: #174ca8; stroke: #174ca8; stroke-width: 2; }
+      .output-label, .output-sub { fill: #fff; }
+      .line { fill: none; stroke: #71849c; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="480" height="330" rx="22" fill="#f8fafd"/>
+  <text class="heading" x="28" y="32">CONTROL FLOW</text>
+  <g transform="translate(32 50)"><rect class="node" width="416" height="52" rx="11"/><text class="label" x="208" y="22" text-anchor="middle">Gamepad Input</text><text class="sub" x="208" y="41" text-anchor="middle">조이패드 입력</text></g>
+  <path class="line" d="M240 103V121"/>
+  <g transform="translate(32 123)"><rect class="process" width="416" height="52" rx="11"/><text class="label" x="208" y="22" text-anchor="middle">C++ / Qt Application</text><text class="sub" x="208" y="41" text-anchor="middle">입력 처리 · 명령 변환</text></g>
+  <path class="line" d="M240 176V194"/>
+  <g transform="translate(32 196)"><rect class="node" width="416" height="52" rx="11"/><text class="label" x="208" y="22" text-anchor="middle">Motor Command</text><text class="sub" x="208" y="41" text-anchor="middle">모터 제어 명령</text></g>
+  <path class="line" d="M240 249V267"/>
+  <g transform="translate(32 269)"><rect class="output" width="416" height="52" rx="11"/><text class="label output-label" x="208" y="22" text-anchor="middle">Motor Controller</text><text class="sub output-sub" x="208" y="41" text-anchor="middle">모터 제어기</text></g>
+</svg>

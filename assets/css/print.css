@@ -792,3 +792,28 @@
     margin-top: 0.6mm !important;
   }
 }
+
+@media print {
+  .motor-screen-frame {
+    min-height: 62mm;
+    padding: 4mm;
+  }
+
+  .motor-screen-frame img {
+    width: 67mm !important;
+    max-width: 100% !important;
+  }
+
+  .motor-primary-figure figcaption {
+    line-height: 1.45;
+  }
+
+  .motor-flow-diagrams {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: stretch !important;
+  }
+
+  .motor-flow-diagrams img {
+    max-height: 50mm !important;
+  }
+}

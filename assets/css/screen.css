@@ -930,6 +930,15 @@ figcaption {
     margin-top: 66px;
   }
 
+  body[data-document="windows-case"] .document-actions {
+    position: static;
+    margin: 10px auto 12px;
+  }
+
+  body[data-document="windows-case"] .document-shell {
+    margin-top: 0;
+  }
+
   .print-page {
     min-height: 0;
     padding: 34px 22px 46px;
@@ -1237,5 +1246,67 @@ figcaption {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+}
+
+.motor-primary-figure {
+  display: flex;
+  flex-direction: column;
+}
+
+.motor-screen-frame {
+  display: flex;
+  flex: 1;
+  min-height: 310px;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: #eef3fa;
+}
+
+.motor-screen-frame img {
+  display: block;
+  width: 276px;
+  max-width: 100%;
+  height: auto;
+}
+
+.motor-primary-figure figcaption {
+  margin-top: auto;
+  border-top: 1px solid var(--line);
+}
+
+.motor-flow-diagrams {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.motor-flow-panel {
+  min-width: 0;
+}
+
+.motor-flow-panel picture,
+.motor-flow-diagrams img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.motor-flow-panel picture {
+  max-width: 392px;
+  margin: 0 auto;
+}
+
+.motor-flow-diagrams img {
+  max-height: none;
+}
+
+@media (max-width: 760px) {
+  .motor-screen-frame {
+    min-height: 180px;
+  }
+
+  .motor-flow-diagrams {
+    grid-template-columns: 1fr;
   }
 }

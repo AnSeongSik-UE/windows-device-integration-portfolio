@@ -7,8 +7,8 @@
     },
     windowsCase: {
       title: "Windows 장비 연동 개발 포트폴리오",
-      subtitle: "서로 다른 장비 입력을 화면·로그·외부 시스템·녹화 파일로 연결한 두 가지 실무 사례",
-      summary: "Serial·UDP·FEnet 기반 장비 데이터 연동과 9채널 RTSP 영상 표시·녹화를 구현했습니다. 입력 수신부터 파싱·변환, 화면·파일·외부 시스템 전달, 종료 시 자원 해제까지 전체 수명주기를 중심으로 정리했습니다.",
+      subtitle: "장비 데이터·영상·모터 제어를 다룬 세 가지 Windows 상용 실무 사례",
+      summary: "Serial·UDP·FEnet 장비 데이터 연동, 9채널 RTSP 영상 표시·녹화, 조이패드 모터 제어와 상태 모니터링을 정리했습니다. 입력 처리부터 화면·파일·외부 시스템 전달까지 프로젝트별 담당 범위를 구분해 보여줍니다.",
       projects: {
         dataHub: {
           title: "TunnelROVDataHub",
@@ -45,6 +45,7 @@
           responsibility: "담당 범위 · Windows 클라이언트 프로그램 개발",
           stack: ["C++", "MFC", "CUDA", "RTSP", "FFmpeg", "NVENC"],
           intro: "측면 8대와 후방 1대, 총 9개 RTSP 영상을 실시간 표시하고 카메라별 제어와 H.264 녹화를 수행하는 Windows 프로그램",
+          detailIntro: "ROV의 여러 카메라를 한 화면에서 운용하도록 만든 Windows 프로그램입니다.",
           imageMain: "assets/images/windows/camera-system.png",
           io: [
             ["입력", "9개 카메라의 RTSP 스트림과 노출·초점·조명 제어값"],
@@ -62,8 +63,27 @@
             "종료 시 녹화를 중단하고 수신·녹화 스레드를 기다린 뒤 OpenCV·FFmpeg 자원을 순서대로 해제",
           ],
           results: [
-            "9개 RTSP 영상 표시와 카메라·조명·녹화 제어를 한 화면에 통합",
-            "CUDA 사용 가능 여부에 따라 GPU·CPU 디코딩 경로를 선택하고 카메라별 수신·녹화 흐름을 독립 관리",
+            "측면 8대·후방 1대의 9채널 영상과 카메라·조명·녹화 제어를 한 화면에 통합",
+            "카메라별 수신·녹화 경로 분리와 사용 가능한 디코딩 경로 선택",
+          ],
+        },
+        motor: {
+          title: "Motor Control",
+          period: "2025.01",
+          responsibility: "담당 범위 · C++/Qt 모터 제어 프로그램 기능 추가",
+          stack: ["C++", "Qt", "Gamepad Input", "Motor Monitoring UI"],
+          detailStack: ["C++", "Qt"],
+          intro: "조이패드 입력을 모터 제어 명령으로 변환하고 Motor 1 / Motor 2의 RPM·전류·전압·온도를 실시간 확인하는 UI 기능을 추가했습니다.",
+          detailIntro: "C++/Qt 기반 모터 제어 프로그램에 조이패드 제어와 모터 상태 수신·모니터링 기능을 추가했습니다.",
+          imageMain: "assets/images/windows/motor-monitoring.png",
+          results: [
+            "조이패드 기반 모터 제어",
+            "모터 상태 수신 및 모니터링 UI",
+          ],
+          implementation: [
+            "조이패드 입력을 처리해 모터 제어 명령으로 변환",
+            "모터 컨트롤러 상태 수신 프로토콜을 구현하고 수신 데이터를 처리",
+            "Motor 1 / Motor 2의 RPM·전류·전압·온도를 실시간 확인하는 UI 기능 추가",
           ],
         },
       },
